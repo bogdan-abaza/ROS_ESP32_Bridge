@@ -1,6 +1,7 @@
 /*********************************************************************
  *  encoder_driver.h
- *  Pin map for ESP32 with a optical quadrature encoder.
+ *  Pin map for ESP32 NodeMCU with a optical quadrature encoder.
+ * ESP32s NodeMCU https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf
  *  It was tested with the NeveRest 40 gearmotor with an attached encoder.
  *********************************************************************/
 // Encoder Pin Definitions

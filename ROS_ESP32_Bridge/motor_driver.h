@@ -1,6 +1,7 @@
 /*********************************************************************
  *  motor_driver.h
  *  Pin map VNH5019MotorShield to ESP32
+ * ESP32s NodeMCU https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf
   *********************************************************************/
 //define pin map 
 #define INA1 26
