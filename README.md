@@ -5,7 +5,7 @@ This implementation is a streamlined adaptation of the Arduino ROS bridge by Jos
 Tested Configuration:
 - Microcontroller: ESP32 NodeMCU-32S (https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf)
 - PololuVNH5019MotorShield: https://github.com/pololu/dual-vnh5019-motor-shield
-- Motor: NeveRest 40 Gearmotor with Encoder (https://www.andymark.com/products/neverest-classic-40-gearmotor)
+- Motors: NeveRest 40 Gearmotor with Encoder (https://www.andymark.com/products/neverest-classic-40-gearmotor)
 
 
 Key Commands:
