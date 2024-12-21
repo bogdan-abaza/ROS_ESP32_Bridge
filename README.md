@@ -11,42 +11,19 @@ This project bridges an ESP32 with a computer (e.g., running ROS) via a serial i
 
 Key Commands:
 Encoder Feedback:
+e - Get the current encoder counts for both motors.
 
-e: Get the current encoder counts for both motors.
-Example: Send e → Response: 1234 5678 (encoder counts for left and right motors).
 Reset Encoders:
+r - Reset encoder counts to zero and PID controllers.
 
-r: Reset encoder counts to zero and PID controllers.
-Example: Send r → Response: OK.
 Set Motor Speeds:
+m <Speed1> <Speed2> - Set motor speeds in encoder counts per loop (default: 30 Hz loop rate).
 
-m <Speed1> <Speed2>: Set motor speeds in encoder counts per loop (default: 30 Hz loop rate).
-Example: Send m 100 150 → Sets Motor 1 to 100 counts/loop and Motor 2 to 150 counts/loop.
 Set Raw PWM:
+o <PWM1> <PWM2> - Set raw PWM values for both motors (-255 to 255).
 
-o <PWM1> <PWM2>: Set raw PWM values for both motors (-255 to 255).
-Example: Send o 200 -200 → Motor 1 at 200 PWM, Motor 2 at -200 PWM.
 Update PID Parameters:
+p <Kp>:<Kd>:<Ki>:<Ko> - Update PID gains for the motors.
 
-p <Kp>:<Kd>:<Ki>:<Ko>: Update PID gains for the motors.
-Example: Send p 1.0:0.5:0.2:10 → Updates PID gains and responds:
-makefile
-Copy code
-PID updated successfully:
-Kp = 1.0
-Kd = 0.5
-Ki = 0.2
-Ko = 10
-OK
 Get Baud Rate:
-
-b: Returns the current serial baud rate.
-Example: Send b → Response: 115200.
-Features
-Automatic motor stop if no command is received within 2 seconds.
-PID loop rate set to 30 Hz for precise speed control.
-Tested with:
-ESP32 NodeMCU-32S
-Pololu VNH5019 Motor Shield
-NeveRest 40 Gearmotor with Encoder
-This interface simplifies integrating motor control into robotics projects while maintaining flexibility for future extensions.
+b - Returns the current serial baud rate.
