@@ -34,13 +34,14 @@ void setMotorSpeeds(int leftSpeed, int rightSpeed) {
   setMotorSpeed(LEFT, leftSpeed);
   setMotorSpeed(RIGHT, rightSpeed);
 }
-// Specific to VNH5019MotorShiel when braking motor
+// Specific to VNH5019MotorShiel when braking a motor
 void setMotorBrake(int i, int brk) {
   if (i == LEFT)
     drive.setM1Brake(brk);
   else
     drive.setM2Brake(brk);
 }
+// Specific to VNH5019MotorShiel when braking both motors
 void setMotorBrakes(int leftSpeed, int rightSpeed) {
   setMotorBrake(LEFT, leftSpeed);
   setMotorBrake(RIGHT, rightSpeed);

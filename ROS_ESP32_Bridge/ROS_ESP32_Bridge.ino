@@ -65,15 +65,12 @@ int runCommand() {
             break;
 
         case READ_ENCODERS: {
-            noInterrupts(); // Dezactivează întreruperile
+            noInterrupts(); 
             long leftEncoder = readEncoder(LEFT); 
             long rightEncoder = readEncoder(RIGHT);
-            interrupts(); // Reactivează întreruperile
-            //Serial.print(leftEncoder);
-            //Serial.print(" ");
-            //Serial.println(rightEncoder);
+            interrupts(); 
             Serial.printf("%d %d\r\n", leftEncoder, rightEncoder);
-            Serial.flush();  // Asigură-te că răspunsul este trimis complet
+            Serial.flush();  
         }
         break;
 
@@ -103,7 +100,7 @@ int runCommand() {
             moving = 0;
             setMotorSpeeds(arg1, arg2);
             Serial.println("OK");
-            Serial.flush();  // Asigură-te că răspunsul este trimis complet
+            Serial.flush();  
             break;
 
         case UPDATE_PID:
