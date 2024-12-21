@@ -4,5 +4,49 @@ This implementation is a streamlined adaptation of the Arduino ROS bridge by Jos
 
 Tested Configuration:
 - Microcontroller: ESP32 NodeMCU-32S (https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf)
-- -Motor: NeveRest 40 Gearmotor with Encoder (https://www.andymark.com/products/neverest-classic-40-gearmotor)
+- Motor: NeveRest 40 Gearmotor with Encoder (https://www.andymark.com/products/neverest-classic-40-gearmotor)
 This project simplifies integrating motor control into robotics projects, leveraging ROS for high-level control and the ESP32 for efficient motor handling.
+Functionality
+This project bridges an ESP32 with a computer (e.g., running ROS) via a serial interface to control two motors through the Pololu VNH5019 Motor Shield. It provides precise motor control and real-time encoder feedback. Additional functionality includes updating PID parameters and resetting encoders.
+
+Key Commands:
+Encoder Feedback:
+
+e: Get the current encoder counts for both motors.
+Example: Send e → Response: 1234 5678 (encoder counts for left and right motors).
+Reset Encoders:
+
+r: Reset encoder counts to zero and PID controllers.
+Example: Send r → Response: OK.
+Set Motor Speeds:
+
+m <Speed1> <Speed2>: Set motor speeds in encoder counts per loop (default: 30 Hz loop rate).
+Example: Send m 100 150 → Sets Motor 1 to 100 counts/loop and Motor 2 to 150 counts/loop.
+Set Raw PWM:
+
+o <PWM1> <PWM2>: Set raw PWM values for both motors (-255 to 255).
+Example: Send o 200 -200 → Motor 1 at 200 PWM, Motor 2 at -200 PWM.
+Update PID Parameters:
+
+p <Kp>:<Kd>:<Ki>:<Ko>: Update PID gains for the motors.
+Example: Send p 1.0:0.5:0.2:10 → Updates PID gains and responds:
+makefile
+Copy code
+PID updated successfully:
+Kp = 1.0
+Kd = 0.5
+Ki = 0.2
+Ko = 10
+OK
+Get Baud Rate:
+
+b: Returns the current serial baud rate.
+Example: Send b → Response: 115200.
+Features
+Automatic motor stop if no command is received within 2 seconds.
+PID loop rate set to 30 Hz for precise speed control.
+Tested with:
+ESP32 NodeMCU-32S
+Pololu VNH5019 Motor Shield
+NeveRest 40 Gearmotor with Encoder
+This interface simplifies integrating motor control into robotics projects while maintaining flexibility for future extensions.
