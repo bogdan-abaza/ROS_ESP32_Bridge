@@ -79,13 +79,13 @@ void doPID(SetPointInfo *p) {
   long output;
   int input;
 
-  input = p->Encoder - p->PrevEnc; // Viteza curentă
-  Perror = p->TargetTicksPerFrame - input; // Eroare
+  input = p->Encoder - p->PrevEnc; 
+  Perror = p->TargetTicksPerFrame - input; 
 
-  // Calcul PID
+  // PID
   output = (Kp * Perror - Kd * (input - p->PrevInput) + p->ITerm) / Ko;
 
-  // Limitează output-ul
+  // Limit output
   if (output >= MAX_PWM) output = MAX_PWM;
   else if (output <= -MAX_PWM) output = -MAX_PWM;
   else p->ITerm += Ki * Perror;
@@ -110,13 +110,13 @@ void updatePID() {
   double calibration_factor_right = 1;
   double l_PID;
   double r_PID;
-  noInterrupts();  // Oprește întreruperile
+  noInterrupts();  
 
   /* Read the encoders */
   leftPID.Encoder = readEncoder(LEFT);
   rightPID.Encoder = readEncoder(RIGHT);
 
-  interrupts();  // Repornește întreruperile
+  interrupts();  
 
   /* If we're not moving there is nothing more to do */
   if (!moving) {

@@ -1,4 +1,4 @@
-This project provides an differential robot interfacebased on an ESP32 microcontroller to communicate via serial with a computer running ROS (Robot Operating System). It enables precise motor control by generating PWM signals for the Pololu VNH5019 Motor Shield, allowing it to drive two motors with encoders.
+This project provides an differential robot interface based on an ESP32 microcontroller to communicate via serial with a computer running ROS (Robot Operating System). It enables precise motor control by generating PWM signals for the Pololu VNH5019 Motor Shield, allowing it to drive two motors with encoders.
 
 This implementation is a streamlined adaptation of the Arduino ROS bridge by Josh Newans (https://github.com/joshnewans/ros_arduino_bridge) — special thanks for the original work! The PololuVNH5019MotorShieldESP32.cpp file has been fine-tuned specifically for the ESP32, building on the original Arduino implementation available here: Pololu dual-vnh5019-motor-shield (https://github.com/pololu/dual-vnh5019-motor-shield).
 
