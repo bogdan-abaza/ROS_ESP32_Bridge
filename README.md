@@ -9,7 +9,7 @@ This project simplifies integrating motor control into robotics projects, levera
 Functionality
 This project bridges an ESP32 with a computer (e.g., running ROS) via a serial interface to control two motors through the Pololu VNH5019 Motor Shield. It provides precise motor control and real-time encoder feedback. Additional functionality includes updating PID parameters and resetting encoders.
 
-Key Commands:
+Key Commands
 -Encoder Feedback:
 "**e**" - Get the current encoder counts for both motors.
 
