@@ -106,7 +106,7 @@ void doPID(SetPointInfo *p) {
 
 /* Read the encoder values and call the PID routine */
 void updatePID() {
-  double calibration_factor_left = 1.06;
+  double calibration_factor_left = 1;
   double calibration_factor_right = 1;
   double l_PID;
   double r_PID;
