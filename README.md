@@ -20,10 +20,10 @@ Key Commands:
 **m <Speed1> <Speed2>** - Set motor speeds in encoder counts per loop (default: 30 Hz loop rate).
 
 -Set Raw PWM:
-"**o <PWM1> <PWM2>**" - Set raw PWM values for both motors (-255 to 255).
+"**o PWM1 PWM2**" - Set raw PWM values for both motors (-255 to 255).
 
 -Update PID Parameters:
-"**p <Kp>:<Kd>:<Ki>:<Ko> **" - Update PID gains for the motors.
+"*p Kp:Kd:Ki:Ko**" - Update PID gains for the motors.
 
 -Get Baud Rate:
 "**b**" - Returns the current serial baud rate.
