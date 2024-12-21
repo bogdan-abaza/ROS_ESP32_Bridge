@@ -11,19 +11,19 @@ This project bridges an ESP32 with a computer (e.g., running ROS) via a serial i
 
 Key Commands:
 -Encoder Feedback:
-**e** - Get the current encoder counts for both motors.
+"**e**" - Get the current encoder counts for both motors.
 
 -Reset Encoders:
-**r** - Reset encoder counts to zero and PID controllers.
+"**r**" - Reset encoder counts to zero and PID controllers.
 
 -Set Motor Speeds:
 **m <Speed1> <Speed2>** - Set motor speeds in encoder counts per loop (default: 30 Hz loop rate).
 
 -Set Raw PWM:
-**o <PWM1> <PWM2>** - Set raw PWM values for both motors (-255 to 255).
+"**o <PWM1> <PWM2>**" - Set raw PWM values for both motors (-255 to 255).
 
 -Update PID Parameters:
-**p <Kp>:<Kd>:<Ki>:<Ko> ** - Update PID gains for the motors.
+"**p <Kp>:<Kd>:<Ki>:<Ko> **" - Update PID gains for the motors.
 
 -Get Baud Rate:
-**b** - Returns the current serial baud rate.
+"**b**" - Returns the current serial baud rate.
