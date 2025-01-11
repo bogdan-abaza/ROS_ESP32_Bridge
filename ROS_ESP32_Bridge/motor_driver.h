@@ -9,7 +9,7 @@
 #define PWM1 14
 #define EN1DIAG1 27
 #define INA2 17
-#define INB2 5
+#define INB2 15
 #define PWM2 2
 #define EN2DIAG2 4
 
